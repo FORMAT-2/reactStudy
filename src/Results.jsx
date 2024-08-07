@@ -1,8 +1,6 @@
 import Pet from './Pet';
 
 const Results= ({pets})=>{
-    console.log(pets);
-    
     return (
         <div classname = "search">
             {!pets.length?( <h1>No Pets Found</h1>):(
@@ -14,7 +12,7 @@ const Results= ({pets})=>{
                         name = {pet.name}
                         location = {`${pet.city}, ${pet.state}`}
                         key = {pet.id}
-
+                        id= {pet.id}
                         />
                     ))
                 )
