@@ -2,7 +2,7 @@ import Pet from './Pet';
 
 const Results= ({pets})=>{
     return (
-        <div classname = "search">
+        <div className = "search">
             {!pets.length?( <h1>No Pets Found</h1>):(
                     pets.map(pet=>(
                         <Pet
@@ -11,6 +11,7 @@ const Results= ({pets})=>{
                         images = {pet.images}
                         name = {pet.name}
                         location = {`${pet.city}, ${pet.state}`}
+                        key = {pet.id}
                         id= {pet.id}
                         />
                     ))
